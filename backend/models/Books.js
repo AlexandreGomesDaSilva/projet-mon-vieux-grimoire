@@ -1,12 +1,7 @@
 // @ts-nocheck
 const mongoose = require("mongoose");
 
-const userSchema = mongoose.Schema({
-  email: { type: String, required: true, unique: true },
-  password: { type: String, required: true },
-});
-
-const bookSchema = mongoose.Schema({
+const booksSchema = mongoose.Schema({
   userId: { type: String, required: true, unique: true },
   title: { type: String, required: true },
   author: { type: String, required: true },
@@ -17,5 +12,4 @@ const bookSchema = mongoose.Schema({
   averageRating: { type: Number },
 });
 
-module.exports = mongoose.model("User", userSchema);
-module.exports = mongoose.model("Book", bookSchema);
+module.exports = mongoose.model("Books", booksSchema);
