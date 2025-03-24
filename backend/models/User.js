@@ -7,6 +7,6 @@ const userSchema = mongoose.Schema({
   password: { type: String, required: true },
 });
 
-userSchema.plugin(uniqueValidator); // Applique le validateur unique au schéma
+userSchema.plugin(uniqueValidator);
 
 module.exports = mongoose.model("User", userSchema);

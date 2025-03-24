@@ -1,3 +1,4 @@
+// @ts-nocheck
 const express = require("express");
 require("./db.js");
 const path = require("path");
@@ -23,6 +24,6 @@ app.use((req, res, next) => {
 });
 
 app.use("/api/books", booksRoutes);
-app.use("api/auth", userRoutes);
+app.use("/api/auth", userRoutes);
 
 module.exports = app;
